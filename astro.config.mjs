@@ -1,9 +1,13 @@
-import { defineConfig } from "astro/config";
+// @ts-check
 import react from "@astrojs/react";
-
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
+import flowbiteReact from "flowbite-react/plugin/astro";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind()],
+  integrations: [react(), flowbiteReact()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

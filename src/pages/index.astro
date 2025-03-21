@@ -1,13 +1,11 @@
 ---
-import { DarkThemeToggle } from "flowbite-react";
-import RootLayout from "../layouts/index.astro";
+import Welcome from "../components/welcome";
+import Layout from "../layouts/Layout.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<RootLayout>
-  <main
-    class="flex min-h-screen items-center justify-center gap-2 dark:bg-gray-800"
-  >
-    <h1 class="text-2xl dark:text-white">Flowbite React + Astro</h1>
-    <DarkThemeToggle client:load />
-  </main>
-</RootLayout>
+<Layout>
+  <Welcome client:load />
+</Layout>
